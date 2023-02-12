@@ -1,7 +1,7 @@
-$(window).on("load", function () {
-  $("body").removeClass("overflow");
-});
 $(document).ready(function () {
+  sal({
+    once: true,
+  });
   /* ~~~~~~~~~~~~~~~ Navigation ~~~~~~~~~~~~~~~ */
   new bootstrap.ScrollSpy(document.body, {
     target: "#fixedNavbar",
@@ -47,7 +47,7 @@ $(document).ready(function () {
     $("body").toggleClass("overflow");
     $(".navbar").slideToggle(400);
     $(".menu-btn").toggleClass("active");
-    $("header").addClass("fixsedt")
+    $("header").addClass("fixsedt");
   });
   /* ~~~~~~~~~~~~~~~ App Slider ~~~~~~~~~~~~~~~ */
   var AppSwiper = new Swiper(".app-slider .swiper", {

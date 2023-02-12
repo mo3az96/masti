@@ -7,6 +7,7 @@
   --bg-color: #fcfcfc;
   --gred-color1: #ff7531;
   --gred-color2: #ff4604;
+  --sal-duration: 1s;
 }
 
 body {
@@ -889,6 +890,15 @@ header.header-scroll.fixsedt {
 @media (max-width: 991px) {
   .download-content {
     display: block;
+  }
+}
+
+.download-text {
+  padding-bottom: 50px;
+}
+@media (max-width: 991px) {
+  .download-text {
+    padding: 0;
   }
 }
 
