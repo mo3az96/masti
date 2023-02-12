@@ -173,6 +173,7 @@ img {
   text-decoration: none;
   -webkit-margin-start: 28px;
           margin-inline-start: 28px;
+  text-transform: capitalize;
   transition: all 0.3s ease-in-out;
 }
 .lang img {
@@ -211,6 +212,7 @@ img {
   font-weight: 300;
   color: #fff;
   position: relative;
+  text-transform: capitalize;
   transition: all 0.3s ease-in-out;
 }
 .navbar .nav-pills .nav-link:after {
@@ -221,6 +223,9 @@ img {
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+}
+html[dir=ltr] .navbar .nav-pills .nav-link:after {
+  transform: scaleX(-1);
 }
 .navbar .nav-pills .nav-link::before {
   position: absolute;
@@ -340,6 +345,7 @@ header.header-scroll.fixsedt {
   color: var(--secondery-color);
   text-align: center;
   margin: 0;
+  text-transform: capitalize;
 }
 @media (max-width: 767px) {
   .sec-title {
@@ -469,15 +475,24 @@ header.header-scroll.fixsedt {
 }
 
 .main-title {
-  font-size: 39px;
   font-weight: 600;
   color: #fff;
   line-height: 1.231;
   margin: 0;
+  text-transform: capitalize;
+}
+html[dir=rtl] .main-title {
+  font-size: 39px;
+}
+html[dir=ltr] .main-title {
+  font-size: 32px;
 }
 @media (max-width: 1199px) {
-  .main-title {
+  html[dir=rtl] .main-title {
     font-size: 32px;
+  }
+  html[dir=ltr] .main-title {
+    font-size: 30px;
   }
 }
 @media (max-width: 991px) {
@@ -485,9 +500,18 @@ header.header-scroll.fixsedt {
     text-align: center;
     font-size: 28px;
   }
+  html[dir=rtl] .main-title {
+    font-size: 28px;
+  }
+  html[dir=ltr] .main-title {
+    font-size: 24px;
+  }
 }
 @media (max-width: 767px) {
-  .main-title {
+  html[dir=rtl] .main-title {
+    font-size: 24px;
+  }
+  html[dir=ltr] .main-title {
     font-size: 24px;
   }
 }
@@ -498,8 +522,10 @@ header.header-scroll.fixsedt {
   font-weight: 300;
   color: #fff;
   max-width: 100%;
-  width: 415px;
   margin: 48px 0 0;
+}
+html[dir=rtl] .main-desc {
+  width: 415px;
 }
 @media (max-width: 1199px) {
   .main-desc {
@@ -627,6 +653,7 @@ header.header-scroll.fixsedt {
   color: var(--secondery-color);
   line-height: 1.223;
   margin: 0 0 22px;
+  text-transform: capitalize;
   transition: all 0.3s ease-in-out;
 }
 .feat-item .feat-desc {
@@ -834,6 +861,7 @@ header.header-scroll.fixsedt {
   font-weight: 500;
   color: var(--secondery-color);
   margin: 0;
+  text-transform: capitalize;
 }
 .partner-item .partner-text {
   font-size: 14px;
@@ -1143,7 +1171,9 @@ header.header-scroll.fixsedt {
   font-weight: 700;
   color: var(--primary-color);
   line-height: 0.75;
-  transform: rotate(-8deg);
+}
+html[dir=ltr] .faq-img .icons {
+  transform: rotate(-8deg) scaleX(-1);
 }
 .faq-img .icons span {
   display: block;
@@ -1217,6 +1247,7 @@ header.header-scroll.fixsedt {
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 14px;
+  text-transform: uppercase;
 }
 @media (max-width: 991px) {
   .state-item .state-value {
@@ -1229,6 +1260,7 @@ header.header-scroll.fixsedt {
   font-weight: 400;
   margin: 0;
   line-height: 1.177;
+  text-transform: capitalize;
 }
 .state-item .state-pattern {
   position: absolute;
@@ -1313,6 +1345,7 @@ footer::after {
   color: #fff;
   font-weight: 500;
   padding-bottom: 27px;
+  text-transform: capitalize;
 }
 @media (max-width: 991px) {
   .footer-title {
@@ -1385,4 +1418,5 @@ footer::after {
   text-align: center;
   margin: 0;
   padding: 16px 15px;
+  text-transform: capitalize;
 }/*# sourceMappingURL=main.css.map */
