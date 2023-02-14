@@ -433,6 +433,12 @@ header.header-scroll.fixsedt {
   border-color: var(--primary-color);
   color: #fff;
 }
+html[dir=ltr] .slider-navs .swiper-btn.swiper-button-prev i::before {
+  content: "\f104";
+}
+html[dir=ltr] .slider-navs .swiper-btn.swiper-button-next i::before {
+  content: "\f105";
+}
 
 .main-sec {
   background-image: linear-gradient(180deg, var(--gred-color1) 0%, var(--primary-color) 52%, var(--gred-color2) 100%);
@@ -1171,6 +1177,7 @@ html[dir=rtl] .main-desc {
   font-weight: 700;
   color: var(--primary-color);
   line-height: 0.75;
+  transform: rotate(-8deg);
 }
 html[dir=ltr] .faq-img .icons {
   transform: rotate(-8deg) scaleX(-1);
